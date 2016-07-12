@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
+ #resources :staic_pages
   get 'staic_pages/home'
 
   get 'staic_pages/help'
+  get 'staic_pages/about'
+  get 'staic_pages/contact'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   root 'staic_pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
