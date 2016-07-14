@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'sessions/new'
+
  #resources :staic_pages
  # check your spelling on everything
   root 'staic_pages#home'
@@ -9,6 +11,10 @@ Rails.application.routes.draw do
   get  '/contact', to: 'staic_pages#contact'
   get  '/signup',  to: 'users#new'
   post '/signup',  to: 'users#create'
+  get    '/login',   to: 'sessions#new'
+post   '/login',   to: 'sessions#create'
+delete '/logout',  to: 'sessions#destroy'
+
 
     resources :users
 
